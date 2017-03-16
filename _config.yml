@@ -3,11 +3,6 @@ description:
 baseurl: ""
 url: ""
 
-# Authors
-authors:
-  - ben: Ben Cunningham
-  - stephen: Stephen Walsh
-
 # Default Settings
 defaults:
   -
