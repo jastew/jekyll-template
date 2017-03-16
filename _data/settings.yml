@@ -6,7 +6,7 @@ contact:
   phone: "041 234 5678"
   email: "company@gmail.com"
   map: ""
-  address:
+  address_lines:
     - "Address Line 1"
     - "Address Line 2"
     - "Address Line 3"
