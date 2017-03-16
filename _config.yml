@@ -5,12 +5,8 @@ url: ""
 
 # Authors
 authors:
-  - 
-    ben:
-      name: Ben Cunningham
-  - 
-    stephen:
-      name: Stephen Walsh
+  - ben: Ben Cunningham
+  - stephen: Stephen Walsh
 
 # Default Settings
 defaults:
