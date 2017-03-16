@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<h1>{{ post.title }}</h1>
+<p>
+    <small>By {{ post.author.name }}</small>
+</p>
+
+{{ content }}
+
+<aside>
+    <h3>Latest Posts</h3>
+    <ul>
+        {% for post in site.posts | limit: 3 %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</aside>

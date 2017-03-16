@@ -1,0 +1,30 @@
+title: Your awesome title
+description:
+baseurl: ""
+url: ""
+
+# Authors
+authors:
+  - ben:
+      name: Ben Cunningham
+  - stephen:
+      name: Stephen Walsh
+
+# Default Settings
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: ben
+
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

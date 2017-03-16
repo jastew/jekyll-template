@@ -1,0 +1,23 @@
+# Logo
+logo_path: ""
+
+# Contact
+contact:
+  phone: "041 234 5678"
+  email: "company@gmail.com"
+  map: ""
+  address:
+    - "Address Line 1"
+    - "Address Line 2"
+    - "Address Line 3"
+
+# Social Media
+social:
+  facebook_url: ""
+  twitter_url: ""
+  youtube_url: ""
+  instagram_url: ""
+
+# Misc
+analytics: ""
+discus: ""

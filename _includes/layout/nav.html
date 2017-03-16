@@ -1,0 +1,13 @@
+<nav class="l-nav">
+    <ul class="l-nav__items">
+        {% for link in site.data.menu.links %}
+            {% assign class = "" %}
+            {% if link.url == page.url %}
+                {% assign class = "is-active" %}
+            {% endif %}
+            <li class="l-nav__item">
+                <a href="{{ link.url }}" class="l-nav__link {{ class }}">{{ link.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
