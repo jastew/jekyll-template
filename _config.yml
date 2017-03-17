@@ -3,12 +3,10 @@ description:
 baseurl: ""
 url: ""
 
-# Authors
-#authors:
-#  ben:
-#    name: Ben Cunningham
-#  stephen:
-#    name: Stephen Walsh
+paginate: 4
+paginate_path: "/blog/page:num/"
+
+permalink: pretty
 
 # Collections
 collections:
@@ -16,24 +14,34 @@ collections:
     ouput: false
   categories:
     output: true
-    permalink: "/blog/:title.html"
     layout: category
+    permalink: "/blog/:title/"
+
 
 # Default Settings
 defaults:
   -
     scope:
       path: ""
+    values:
+      layout: default
+      type: website
+  -
+    scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
+      permalink: "/blog/:categories/:title/"
       author: ben
+      type: article
   -
     scope:
       path: ""
       type: "categories"
     values:
       layout: "category"
+
 
 # Sass
 sass:
@@ -44,6 +52,8 @@ sass:
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate-v2
 exclude:
   - Gemfile
   - Gemfile.lock

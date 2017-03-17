@@ -1,0 +1,31 @@
+.l-breadcrumb {
+  //padding: 0.5rem;
+  //background: #eeeeee;
+  //color: #111111;
+
+  &__items {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 0.25rem;
+
+    &:after {
+      display: inline-block;
+      margin-left: 0.25rem;
+      content: '/';
+    }
+    &:last-child:after {
+      //display: none;
+    }
+  }
+  
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+}

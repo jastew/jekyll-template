@@ -2,29 +2,46 @@
 layout: default
 ---
 {% assign author = site.authors | where: 'slug', page.author | first %}
+{% assign category = site.categories | where: "slug", page.category | first %}
+{% assign related = site.posts | where: "category", page.category | where_exp: "item", "item.slug != page.slug" | limit: 3 %}
+{% assign related_count = related | size %}
 
 <h1>{{ page.title }}</h1>
 <p>
-    <small>By {{ author.name }} on {{ page.date | date: "%-d %B, %Y" }} </small>
+    <small>
+        Posted
+        {% if category %}
+        in <a href="{{ category.url }}">{{ category.title }}</a>
+        {% endif %}
+        by {{ author.name }} on {{ page.date | date: "%-d %B, %Y" }}
+    </small>
 </p>
-<ul>
-    {% for categoryId in page.categories %}
-        {% assign category = site.categories | where: "slug", categoryId | first %}
-        <li>
-            <a href="{{ category.url }}">{{ category.title }}</a>
-        </li>
-    {% endfor %}
-</ul>
+
+<p>
+    Share on:
+    <a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url | absolute }}" target="_blank" rel="nofollow">Facebook</a> |
+    <a href="http://www.twitter.com/share?url={{ site.url }}{{ site.baseurl }}{{ page.url | absolute }}" target="_blank" rel="nofollow">Twitter</a> |
+    <a href="mailto:?subject={{ page.title | uri_escape }}&body={{ site.url }}{{ site.baseurl }}{{ page.url }}">Email</a>
+</p>
 
 {{ content }}
 
+{% if page.next.url %}
+<p><a href="{{ page.next.url }}">Next: {{ page.next.title }}</a></p>
+{% endif %}
+{% if page.previous.url %}
+<p><a href="{{ page.previous.url }}">Prev: {{ page.previous.title }}</a></p>
+{% endif %}
+
 <aside>
-    <h3>Latest Posts</h3>
-    <ul>
-        {% for post in site.posts | limit: 3 %}
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+    {% if related_count > 0 %}
+        <h3>Related Posts</h3>
+        <ul>
+            {% for related_post in related | limit: 3 %}
+            <li>
+                <a href="{{ related_post.url }}">{{ related_post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </aside>
