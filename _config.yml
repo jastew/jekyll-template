@@ -3,9 +3,6 @@ description:
 baseurl: ""
 url: ""
 
-paginate: 4
-paginate_path: "/blog/page:num/"
-
 permalink: pretty
 
 # Collections
@@ -44,16 +41,24 @@ defaults:
 
 
 # Sass
-sass:
-  sass_dir: _scss
-  style: compressed
+#sass:
+#  sass_dir: _scss
+#  style: compressed
+
+# Assets
+assets:
+  compress:
+    css: true
+    html: true
+  digest: true
 
 # Build settings
 markdown: kramdown
 gems:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate-v2
+  - jekyll-assets
+  - mini_magick
 exclude:
   - Gemfile
   - Gemfile.lock
