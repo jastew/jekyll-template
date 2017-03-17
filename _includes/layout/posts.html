@@ -1,8 +1,9 @@
 <ul class="posts__items">
     {% for post in include.posts %}
+    {% assign author = site.authors | where: 'slug', post.author | first %}
     <li class="posts__item">
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p><small>Posted by {{ author.name }} on {{ page.date | date: "%-d %B, %Y" }}</small></p>
+        <p><small>Posted by {{ author.name }} on {{ post.date | date: "%-d %B, %Y" }}</small></p>
         <p>{{ post.description }}</p>
     </li>
     {% endfor %}
