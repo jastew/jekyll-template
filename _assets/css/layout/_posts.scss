@@ -1,0 +1,14 @@
+.posts {
+    
+    &__items {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    
+    &__item {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+}

@@ -1,7 +1,13 @@
-<ul>
+<ul class="posts__items">
     {% for post in include.posts %}
-    <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+    {% assign author = site.authors | where: 'slug', post.author | first %}
+    <li class="posts__item">
+        <h2 class="posts__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p><small>Posted by {{ author.name }} on {{ post.date | date: "%-d %B, %Y" }}</small></p>
+        {% if post.image %}
+            <a href="{{ post.url }}" class="posts__media"><img src="{{ post.image | absolute_url}}"></a>
+        {% endif %}
+        <p>{{ post.description }}</p>
     </li>
     {% endfor %}
 </ul>
