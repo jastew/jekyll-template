@@ -1,4 +1,4 @@
-- page: "Home"
+- title: "Home"
   url: "/"
-- page: "Blog"
+- title: "Blog"
   url: "/blog.html"
