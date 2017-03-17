@@ -4,11 +4,16 @@ baseurl: ""
 url: ""
 
 # Authors
-authors:
-  ben:
-    name: Ben Cunningham
-  stephen: 
-    name: Stephen Walsh
+#authors:
+#  ben:
+#    name: Ben Cunningham
+#  stephen:
+#    name: Stephen Walsh
+
+# Collections
+collections:
+  authors:
+    ouput: false
 
 # Default Settings
 defaults:
