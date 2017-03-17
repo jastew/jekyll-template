@@ -14,6 +14,10 @@ url: ""
 collections:
   authors:
     ouput: false
+  categories:
+    output: true
+    permalink: "/blog/:title.html"
+    layout: category
 
 # Default Settings
 defaults:
@@ -24,7 +28,17 @@ defaults:
     values:
       layout: "post"
       author: ben
+  -
+    scope:
+      path: ""
+      type: "categories"
+    values:
+      layout: "category"
 
+# Sass
+sass:
+  sass_dir: _scss
+  style: compressed
 
 # Build settings
 markdown: kramdown

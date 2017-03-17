@@ -7,6 +7,14 @@ layout: default
 <p>
     <small>By {{ author.name }}</small>
 </p>
+<ul>
+    {% for categoryId in page.categories %}
+        {% assign category = site.categories | where: "slug", categoryId | first %}
+        <li>
+            <a href="{{ category.url }}">{{ category.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
 
 {{ content }}
 
