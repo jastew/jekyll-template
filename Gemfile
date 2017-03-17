@@ -22,6 +22,7 @@ gem "minima", "~> 2.0"
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem "jekyll-sitemap"
-   gem "jekyll-assets"
    gem "mini_magick"
+   gem "jekyll-assets"
+   gem "autoprefixer-rails"
 end
