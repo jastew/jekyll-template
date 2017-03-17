@@ -1,7 +1,7 @@
 ---
 title: Benefits of Vitamin B12
 description: Learn how vitamin B12 can give you new found energy
-image: /uploads/b-12.jpg
+image: /uploads/testing.jpg
 category: nutrition
 ---
 
