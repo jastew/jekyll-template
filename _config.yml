@@ -3,6 +3,13 @@ description:
 baseurl: ""
 url: ""
 
+# Authors
+authors:
+  ben:
+    name: Ben Cunningham
+  stephen: 
+    name: Stephen Walsh
+
 # Default Settings
 defaults:
   -
