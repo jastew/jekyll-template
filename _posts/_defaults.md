@@ -1,7 +1,7 @@
 ---
 title: ""
 description: ""
-categories: 
+category: 
 image: ""
 author: ben
 ---
