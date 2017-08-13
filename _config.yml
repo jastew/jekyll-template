@@ -41,15 +41,9 @@ defaults:
 
 
 # Sass
-#sass:
-#  sass_dir: _scss
-#  style: compressed
-
-mini_magick:
-  thumbnail:
-    source: /uploads/
-    destination: /uploads/thumbnails/
-    resize: 200x200
+sass:
+  sass_dir: _scss
+  style: compressed
 
 # Assets
 assets:
